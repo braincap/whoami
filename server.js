@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/api', (req, res) => {
+app.get('/api/whoami', (req, res) => {
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   var lang = req.headers["accept-language"];
   var machine = req.headers["user-agent"];
